@@ -4,11 +4,11 @@ services:
   web:
     build: ./web
     ports:
-      "5000:5000"
+      - "5000:5000"
     volumes:
-      ./web:/app
+      - ./web:/app
     depends_on:
-      redis
+      - redis
 
   redis:
     image: redis:latest
